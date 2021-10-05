@@ -1,0 +1,104 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  user-select: none;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 70rem;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+header h1 {
+    margin: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+#board .found {
+    border: none;
+}
+
+.card {
+    width: 15rem;
+    height: 15rem;
+    margin: 1rem;
+    border: 0.2rem solid #202020;
+    font-size: 7rem;
+    line-height: 15rem;
+    border-radius: 0.8rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card .front {
+    background: #202020;
+    color: #ffffff;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+select {
+    margin: 1rem auto;
+    padding: 0.35rem;
+    display: block;
+}
+
+button {
+    margin: 1rem auto 3rem auto;
+    padding: 0.3rem;
+    display: block;
+}
+
+#splash {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+#splash-content {
+    text-align: center;
+    margin: 40vh auto;
+    font-size: 3rem;
+    line-height: 5rem;
+}
